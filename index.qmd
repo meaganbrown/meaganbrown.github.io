@@ -1,11 +1,38 @@
 ---
-title: "mbrown.github.io"
+title: "Meagan Brown"
+subtitle: "Groundwater | Environmental Justice | Data Science"
+about: 
+   template: trestles
+   image: me.png
+   image-shape: rounded
+   links: 
+        - icon: linkedin
+          text: LinkedIn
+          href: https://www.linkedin.com/in/meaganbrown/
+        - icon: github
+          text: GitHub
+          href: https://github.com/meaganbrown
+        - icon: twitter
+          text: twitter
+        - icon: envelope
+          text: Email Me!
+          href: mailto:meagan_brown@ucsb.edu
 ---
 
-This is a Quarto website.
+## About Me
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Hi, I'm Meagan!
 
-```{r}
-1 + 1
-```
+------------------------------------------------------------------------
+
+## Education
+
+##### **UC, Santa Barbara**
+
+*MS in Environmental Data Science* \| 2023
+
+*BS in Environmental Studies* \| 2021
+
+------------------------------------------------------------------------
+
+## Research Experience

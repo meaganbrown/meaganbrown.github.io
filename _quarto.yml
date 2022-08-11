@@ -1,20 +1,22 @@
 project:
   type: website
   output-dir: docs
-
+  
 website:
-  title: "mbrown.github.io"
+  title: "Meagan Brown"
+  sidebar: true
+  search: true
   navbar:
     left:
       - href: index.qmd
-        text: Home
-      - about.qmd
-
+        text: About Meagan
+      - hello.qmd
+      
 format:
   html:
-    theme: cosmo
+    theme: lux
+    backgroundcolor: seashell
     css: styles.css
     toc: true
-
 editor: visual
 
