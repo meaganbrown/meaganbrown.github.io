@@ -7,5 +7,3 @@ about:
    image: me.png
    image-shape: rounded
 ---
-
-
