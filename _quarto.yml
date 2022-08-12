@@ -1,6 +1,5 @@
 project:
   type: website
-  output-dir: docs
   
 website:
   title: "Meagan Brown"
@@ -10,7 +9,7 @@ website:
     left:
       - href: index.qmd
         text: About Meagan
-      - hello.qmd
+      - index.qmd
       
 format:
   html:

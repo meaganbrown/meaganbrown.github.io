@@ -2,9 +2,23 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "mbrown.github.io",
+    "title": "Meagan Brown",
     "section": "",
-    "text": "To learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "Hi, I’m Meagan!"
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Meagan Brown",
+    "section": "Education",
+    "text": "Education\n\nUC, Santa Barbara\nMS in Environmental Data Science | 2023\nBS in Environmental Studies | 2021"
+  },
+  {
+    "objectID": "index.html#research-experience",
+    "href": "index.html#research-experience",
+    "title": "Meagan Brown",
+    "section": "Research Experience",
+    "text": "Research Experience"
   },
   {
     "objectID": "about.html",
