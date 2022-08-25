@@ -14,7 +14,7 @@ about:
           href: https://github.com/meaganbrown
         - icon: twitter
           text: twitter
-          href: https://twitter.com/Meagan49388609
+          href: https://twitter.com/meagan__brown
         - icon: envelope
           text: Email Me!
           href: mailto:meagan_brown@ucsb.edu
