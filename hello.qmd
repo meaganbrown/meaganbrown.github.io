@@ -1,5 +1,5 @@
 ---
-title: "hello"
+title: "About Meagan"
 editor: visual
 subtitle: "Groundwater | Environmental Justice | Data Science"
 about: 

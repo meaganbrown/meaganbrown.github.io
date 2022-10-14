@@ -1,9 +1,9 @@
 ---
-title: "About"
+title: "About Meagan"
 ---
 
-About this site
+## About Me
 
-```{r}
-1 + 1
-```
+Hi, I'm Meagan! :)
+
+I am a first-generation graduate of the University of California, Santa Barbara where I earned my Bachelor of Science degree in Environmental Studies. Through my experience growing up near lakes with water quality problems due to agricultural runoff, I developed a passion for the environment. After conducting my senior thesis on equity and representation in California’s Sustainable Groundwater Management Act (SGMA) I discovered my passion for environmental justice and research. During my gap year, I worked for The Nature Conservancy and UCSB professor Dr. Debra Perrone, continuing my work in environmental justice with a focus on geospatial spatial analysis. I also interned for the City of Santa Barbara Sustainability & Resilience department developing an interactive dashboard for their webpage. Currently, I am pursuing a Master of Environmental Data Science from the Bren School of Environmental Science and Management. My passions lie in water resources management, geospatial analysis, and environmental justice. With new skills from my Environmental Data Science degree, I will conduct research that benefits undeserved communities. 

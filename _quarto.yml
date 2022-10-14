@@ -9,12 +9,14 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: About Meagan
-      - index.qmd
+        text: Home
+      - about.qmd
       
 format:
   html:
-    theme: lux
+    theme: 
+    - mystyle.css
+    mainfont: Avenir
     backgroundcolor: seashell
     css: styles.css
     toc: true
