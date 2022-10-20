@@ -12,8 +12,6 @@ website:
         text: Home
       - href: about.qmd
         text: About
-      - href: resume.rmd
-        text: Resume
       
 format:
   html:
