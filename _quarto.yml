@@ -12,6 +12,9 @@ website:
         text: Home
       - href: about.qmd
         text: About
+      - href: resume.qmd
+        text: Resume
+
       
 format:
   html:
