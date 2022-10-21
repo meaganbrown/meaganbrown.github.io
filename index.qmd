@@ -20,7 +20,6 @@ about:
           href: mailto:meagan_brown@ucsb.edu
 ---
 
-
 ------------------------------------------------------------------------
 
 ## Education
@@ -28,12 +27,21 @@ about:
 ##### **UC, Santa Barbara**
 
 <div class="topbr">
-<p class="custom-subtitle">`r fontawesome::fa("graduation-cap", fill = "#4a76a8", a11y = "sem")`*MS in `Environmental Data Science* | 2023
+
+<p class="custom-subtitle">
+
+`r fontawesome::fa("graduation-cap", fill = "#4a76a8", a11y = "sem")`*MS in \`Environmental Data Science* \| 2023
 
 <div class="topbr">
-<p class="custom-subtitle">`r fontawesome::fa("graduation-cap", fill = "#4a76a8", a11y = "sem")`
-*BS in Environmental Studies* | 2021
+
+<p class="custom-subtitle">
+
+`r fontawesome::fa("graduation-cap", fill = "#4a76a8", a11y = "sem")` *BS in Environmental Studies* \| 2021
 
 ------------------------------------------------------------------------
 
-## Research Experience
+## Highlighted Projects
+
+City of Santa Barbara - Sustainability & Resilience Dashboard \| (2021)
+
+https://www.arcgis.com/apps/dashboards/97777fbe8eb04bdb998813c6759dff69

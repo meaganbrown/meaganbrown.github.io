@@ -3,19 +3,20 @@ project:
   output-dir: docs
 
 website:
+  favicon: images/logo4.png
   title: "Meagan Brown"
   sidebar: true
-  search: true
+  search: false
   navbar:
     right:
       - href: index.qmd
         text: Home
+        icon: house
       - href: about.qmd
         text: About
-      - href: resume.qmd
-        text: Resume
+      - text: Resume
+        href: Brown_Meagan_Resume.pdf
 
-      
 format:
   html:
     theme: 
