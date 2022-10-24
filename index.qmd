@@ -42,6 +42,7 @@ about:
 
 ## Highlighted Projects
 
-City of Santa Barbara - Sustainability & Resilience Dashboard \| (2021)
+City of Santa Barbara - Sustainability & Resilience Dashboard | (2021)
 
-https://www.arcgis.com/apps/dashboards/97777fbe8eb04bdb998813c6759dff69
+[![Dashboard created for the City of Santa Barbara Sustainability and Resilience Department to show city clean up efforts over time. Created with ESRI ArcGIS Products ](dashboard.png)](https://www.arcgis.com/apps/dashboards/97777fbe8eb04bdb998813c6759dff69)
+
