@@ -30,7 +30,7 @@ about:
 
 <p class="custom-subtitle">
 
-`r fontawesome::fa("graduation-cap", fill = "#4a76a8", a11y = "sem")`*MS in \`Environmental Data Science* \| 2023
+`r fontawesome::fa("graduation-cap", fill = "#4a76a8", a11y = "sem")`*MS in Environmental Data Science* \| 2023
 
 <div class="topbr">
 

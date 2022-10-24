@@ -11,11 +11,12 @@ website:
     right:
       - href: index.qmd
         text: Home
-        icon: house
       - href: about.qmd
         text: About
       - text: Resume
         href: Brown_Meagan_Resume.pdf
+      - href: posts.qmd
+        text: Blog
 
 format:
   html:
