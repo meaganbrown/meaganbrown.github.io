@@ -1,0 +1,15 @@
+---
+title: "Meagan's First Blog Post"
+description: "Practicing writing my first post"
+author: 
+  - name: Meagan Brown
+    url: https://meaganbrown.github.io
+    orcid: 0000-0003-4582-0873
+    affiliation: MEDS
+    affiliation-url: https://ucsb-meds.github.io
+date: 2022-10-24
+categories: [MEDS, R]
+citation: https://meaganbrown.github.io/posts/2022-10-24-first-post
+---
+
+Hey this is my first post :)
