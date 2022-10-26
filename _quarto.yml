@@ -8,18 +8,23 @@ website:
   sidebar: true
   search: false
   navbar:
+    title: false
+    logo: images/logo.png
+    left:
+      - text: Home
+        href: index.qmd
+      - text: About
+        href: about.qmd
+        
     right:
-      - href: index.qmd
-        text: Home
-      - href: about.qmd
-        text: About
       - text: Resume
         href: Brown_Meagan_Resume.pdf
       - href: posts.qmd
         text: Blog
-
+reader-mode: true
 format:
   html:
+    page-layout: full
     theme: 
     - mystyle.css
     mainfont: Avenir

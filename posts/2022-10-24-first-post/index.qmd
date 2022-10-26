@@ -16,10 +16,8 @@ image: logo2.png
 draft: false
 ---
 
-Hey this is my first[@abashian2002] post :)
+Hey this is my first post this will be deleted later :)
 
 Referencing Sam Csik's blog post about writing blog posts [@csik2022]
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Attention prospective grad students for fall 2023! Here is a short list of must-ask questions to any PhD advisor you are considering. If your considering a new PI as your mentor (that is great!), I can write a different thread about how that discussion if there is interest.</p>&mdash; Michelle Heck (@Michelle_Heck1) <a href="https://twitter.com/Michelle_Heck1/status/1584247043484454913?ref_src=twsrc%5Etfw">October 23, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-hey
