@@ -21,7 +21,7 @@ about:
           href: mailto:meagan_brown@ucsb.edu
 ---
 
-## A little about me!
+## A Little About Me!
 
 I am currently pursuing a Master of Environmental Data Science Degree at UC Santa Barbara with the Bren School of Environmental Science & Management. I enjoy geospatial analysis and I am passionate about environmental justice and groundwater resources. In my spare time you can find me at the beach with my pup!
 
