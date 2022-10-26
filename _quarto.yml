@@ -24,8 +24,7 @@ website:
 
   page-footer: 
     background: "#4a76a8"
-    left: 
-      - "Copyright 2022, Meagan Brown"
+    left: "Copyright 2022, Meagan Brown"
     right: 
       - icon: github
         href:  https://github.com/meaganbrown
