@@ -23,7 +23,7 @@ website:
         text: Blog
 
   page-footer: 
-    background: "#4a76a8"
+    background: "#4E7895"
     left: "Copyright 2022, Meagan Brown"
     right: 
       - icon: github
