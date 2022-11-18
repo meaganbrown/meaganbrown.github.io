@@ -11,7 +11,7 @@
     "href": "posts/2022-10-24-first-post/index.html",
     "title": "Meagan’s First Blog Post",
     "section": "",
-    "text": "Referencing Sam Csik’s blog post about writing blog posts (Csik 2022)\n\n\n\n\nReferences\n\nCsik, Samantha. 2022. “Adding a Blog to Your Existing Quarto Website.” October 24, 2022. https://samanthacsik.github.io/posts/2022-10-24-quarto-blogs/.\n\nCitationBibTeX citation:@online{brown2022,\n  author = {Meagan Brown},\n  title = {Meagan’s {First} {Blog} {Post}},\n  date = {2022-10-24},\n  url = {https://meaganbrown.github.io/posts/2022-10-24-first-post},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nMeagan Brown. 2022. “Meagan’s First Blog Post.” October 24,\n2022. https://meaganbrown.github.io/posts/2022-10-24-first-post."
+    "text": "Referencing Sam Csik’s blog post about writing blog posts (Csik 2022)\n\n\n\n\nReferences\n\nCsik, Samantha. 2022. “Adding a Blog to Your Existing Quarto Website.” October 24, 2022. https://samanthacsik.github.io/posts/2022-10-24-quarto-blogs/.\n\nCitationBibTeX citation:@online{brown2022,\n  author = {Meagan Brown},\n  editor = {},\n  title = {Meagan’s {First} {Blog} {Post}},\n  date = {2022-10-24},\n  url = {https://meaganbrown.github.io/posts/2022-10-24-first-post},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nMeagan Brown. 2022. “Meagan’s First Blog Post.” October 24,\n2022. https://meaganbrown.github.io/posts/2022-10-24-first-post."
   },
   {
     "objectID": "index.html",
