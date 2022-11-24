@@ -7,11 +7,25 @@
     "text": "My resume"
   },
   {
-    "objectID": "posts/2022-10-24-first-post/index.html",
-    "href": "posts/2022-10-24-first-post/index.html",
-    "title": "Meagan’s First Blog Post",
-    "section": "",
-    "text": "Referencing Sam Csik’s blog post about writing blog posts (Csik 2022)\n\n\n\n\nReferences\n\nCsik, Samantha. 2022. “Adding a Blog to Your Existing Quarto Website.” October 24, 2022. https://samanthacsik.github.io/posts/2022-10-24-quarto-blogs/.\n\nCitationBibTeX citation:@online{brown2022,\n  author = {Meagan Brown},\n  editor = {},\n  title = {Meagan’s {First} {Blog} {Post}},\n  date = {2022-10-24},\n  url = {https://meaganbrown.github.io/posts/2022-10-24-first-post},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nMeagan Brown. 2022. “Meagan’s First Blog Post.” October 24,\n2022. https://meaganbrown.github.io/posts/2022-10-24-first-post."
+    "objectID": "posts/groundwater-wildfire-stats/index.html#data",
+    "href": "posts/groundwater-wildfire-stats/index.html#data",
+    "title": "Does Groundwater Availability Influence Wildfire Severity?",
+    "section": "Data",
+    "text": "Data"
+  },
+  {
+    "objectID": "posts/groundwater-wildfire-stats/index.html#analysis",
+    "href": "posts/groundwater-wildfire-stats/index.html#analysis",
+    "title": "Does Groundwater Availability Influence Wildfire Severity?",
+    "section": "Analysis",
+    "text": "Analysis"
+  },
+  {
+    "objectID": "posts/groundwater-wildfire-stats/index.html#results",
+    "href": "posts/groundwater-wildfire-stats/index.html#results",
+    "title": "Does Groundwater Availability Influence Wildfire Severity?",
+    "section": "Results",
+    "text": "Results"
   },
   {
     "objectID": "index.html",
@@ -46,6 +60,6 @@
     "href": "posts.html",
     "title": "posts",
     "section": "",
-    "text": "MEDS\n\n\nR\n\n\n\nPracticing writing my first post\n\n\n\nMeagan Brown\n\n\nOct 24, 2022\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "MEDS\n\n\nR\n\n\n\n\n\n\n\nMeagan Brown\n\n\nNov 24, 2022\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]

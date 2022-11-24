@@ -13,7 +13,7 @@ citation:
   url: https://meaganbrown.github.io/posts/2022-10-24-first-post
 bibliography: references.bib
 image: logo2.png
-draft: false
+draft: true
 ---
 
 Hey this is my first post this will be deleted later :)

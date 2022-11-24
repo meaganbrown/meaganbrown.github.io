@@ -3,13 +3,13 @@ project:
   output-dir: docs
 
 website:
-  favicon: images/logo.png
+  favicon: images/logo1.png
   title: "Meagan Brown"
   sidebar: true
   search: false
   navbar:
     title: Meagan Brown
-    logo: images/logo.png
+    logo: images/logo1.png
     left:
       - text: Home
         href: index.qmd
