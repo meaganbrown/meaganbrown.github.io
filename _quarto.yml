@@ -9,7 +9,6 @@ website:
   search: false
   navbar:
     title: Meagan Brown
-    logo: images/logo.png
     left:
       - text: Home
         href: index.qmd
