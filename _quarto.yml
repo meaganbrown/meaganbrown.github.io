@@ -36,7 +36,7 @@ format:
     theme: 
     - mystyle.css
     mainfont: Avenir
-    backgroundcolor: seashell
+    backgroundcolor: "#FAFAF9"
     css: styles.css
     toc: true
     editor: visual

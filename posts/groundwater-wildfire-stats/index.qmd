@@ -1,6 +1,6 @@
 ---
 title: "Does Groundwater Availability Influence Wildfire Severity?"
-description: ""
+description: "Statistical analysis of the relationship between groundwater and wilfire severity in California"
 author: 
   - name: Meagan Brown
     url: https://meaganbrown.github.io
@@ -17,6 +17,8 @@ draft: false
 ---
 
 ## Motivation
+
+While there are extensive studies on how wildfires affect groundwater quality, there is minimal research on how groundwater availability influences wildfire severity. Specifically, this analysis has never been done in California where we are facing extremely low groundwater levels and increasingly intense wildfire seasons.
 
 ## Data
 
