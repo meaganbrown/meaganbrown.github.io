@@ -14,7 +14,60 @@ citation:
 bibliography: references.bib
 image: logo.png
 draft: false
+format: 
+  html: 
+    code-fold: true
+    code-summary: "View Code"
 ---
+
+```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
+library(tidyverse)
+library(here)
+library(lubridate)
+library(dplyr)
+library(scales)
+library(ggthemes)
+library(gghighlight)
+library(ggnewscale)
+library(gt)
+library(nationalparkcolors)
+library(kableExtra)
+```
+
+```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
+#read in data for # of wildfires and acres burned in CA from 1987-2018
+ca_wildfire <- read_csv(here("posts",
+                             "groundwater-wildfire-stats",
+                             "data",
+                             "ca_wildfire.csv"))
+
+#read in CA groundwater measurement data
+gw_levels <- read_csv(here("posts",
+                            "groundwater-wildfire-stats",
+                            "data",
+                            "gw_levels_current.csv"))
+```
+
+```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
+#changing measurement dates column from POSIXTct to Date 
+gw_levels <- gw_levels %>% 
+mutate(msmt_date = format(as.POSIXct(msmt_date,
+format='%Y/%m/%d %H:%M:%S'),
+format='%Y/%m/%d')) %>% #dropping time from date data
+mutate(msmt_date = ymd(msmt_date))
+
+#filter dates to match wildfire data (1987 - 2018)
+gw_levels_current <- gw_levels %>% 
+  filter(between(msmt_date, 
+                 as.Date('1987/01/01'), 
+                 as.Date('2018/12/31')))
+
+#Create year column and find median groundwater elevation for each year
+gw_levels_year <- gw_levels_current %>% 
+mutate(year = lubridate::year(msmt_date)) %>% 
+group_by(year) %>% 
+summarize(median_gwe = median(gwe, na.rm = TRUE))
+```
 
 ## Motivation
 
@@ -22,7 +75,51 @@ While there are extensive studies on how wildfires affect groundwater quality, t
 
 ## Data
 
+##### CAL FIRE - Wildland Fires & Acres - All Jurisdictions (1987 - 2018)
+
+For the fire data used in my analysis, I used CAL FIRES Wildland Fires & Acres - All Jurisdictions (1987-2018) data. This data tells us the total number of fires and total acres burned in California across all jurisdictions. The limitation to this data was it was in .pdf format so I had to manually input values into an excel spreadsheet.
+
+[![](images/fire_data.png)](https://www.fire.ca.gov/stats-events/)
+
+##### California DWR - Periodic Groundwater Level Measurements
+
+For groundwater level data, I used the California Department of Water Resource's periodic groundwater level measurement data.
+
+## [![](images/gw_data.png)](https://data.cnra.ca.gov/dataset/periodic-groundwater-level-measurements)
+
 ## Analysis
+
+```{r, ECHO = TRUE}
+knitr::opts_chunk$set(fig.width=12, fig.height=8) 
+
+gwe_median <- median(gw_levels_year$median_gwe)
+                     
+gw_levels_year$above_median <- ifelse(gw_levels_year$median_gwe > gwe_median, "No", "Yes")
+
+boxplot_fig <- ggplot() +
+  geom_boxplot(data = ca_wildfire,
+            aes(x = gw_levels_year$above_median,
+                y = total_acres_burned),
+            col = c("#BB5858", "#58A1BB"),
+            lwd = 1.25,
+            fill = "#FAFAF9") +
+  scale_y_continuous(labels = comma, 
+                     name = "Total Acres Burned in California") +
+  scale_x_discrete(name = "Are Groundwater Levels Above the Median?") +
+  theme_classic() +
+  theme(axis.text = element_text(color="black", size=15),
+                     axis.title.x = element_text(color= "black", 
+                                                 size=18, 
+                                                 vjust = -2),
+                     axis.title.y = element_text(color= "black", 
+                                                 size=18, 
+                                                 vjust = 3),
+         plot.margin = margin(20, 20, 20, 35),
+         panel.background = element_rect(fill = "#FAFAF9"),
+         plot.background = element_rect(fill = "#FAFAF9"))
+
+boxplot_fig
+```
 
 ## Results
 
