@@ -32,6 +32,7 @@ library(ggnewscale)
 library(gt)
 library(nationalparkcolors)
 library(kableExtra)
+library(gridExtra)
 ```
 
 ```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
@@ -73,6 +74,34 @@ summarize(median_gwe = median(gwe, na.rm = TRUE))
 
 While there are extensive studies on how wildfires affect groundwater quality, there is minimal research on how groundwater availability influences wildfire severity. Specifically, this analysis has never been done in California where we are facing extremely low groundwater levels and increasingly intense wildfire seasons.
 
+```{r}
+#plotting fire occurences 1987 - 2018
+fire <- ggplot() +
+  geom_line(data = ca_wildfire,
+            aes(x = year,
+                y = total_fires)) +
+  scale_x_continuous(breaks = scales::pretty_breaks(n = 12), name = "Year") +
+  scale_y_continuous(labels = comma, name = "Total Fires in California") +
+  theme_classic() +
+  theme(panel.background = element_rect(fill = "#FAFAF9"),
+         plot.background = element_rect(fill = "#FAFAF9")) 
+
+#plotting total acres burned from 1987 - 2018
+fire_acre <- ggplot() +
+  geom_line(data = ca_wildfire,
+            aes(x = year,
+                y = total_acres_burned),
+            col = "darkred") +
+  scale_x_continuous(breaks = scales::pretty_breaks(n = 12), name = "Year") +
+  scale_y_continuous(labels = comma, name = "Total Acres Burned in California") +
+  theme_classic() +
+  theme(axis.title.y = element_text(color ="darkred"),
+         panel.background = element_rect(fill = "#FAFAF9"),
+         plot.background = element_rect(fill = "#FAFAF9"))
+ 
+grid.arrange(fire, fire_acre)
+```
+
 ## Data
 
 ##### CAL FIRE - Wildland Fires & Acres - All Jurisdictions (1987 - 2018)
@@ -87,7 +116,7 @@ For groundwater level data, I used the California Department of Water Resource's
 
 ## [![](images/gw_data.png)](https://data.cnra.ca.gov/dataset/periodic-groundwater-level-measurements)
 
-## Analysis
+####Analysis
 
 ```{r, ECHO = TRUE}
 knitr::opts_chunk$set(fig.width=12, fig.height=8) 
