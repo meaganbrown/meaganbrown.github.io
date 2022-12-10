@@ -30,9 +30,13 @@ library(ggthemes)
 library(gghighlight)
 library(ggnewscale)
 library(gt)
-library(nationalparkcolors)
 library(kableExtra)
-library(gridExtra)
+library(pixiedust)
+library(readr)
+library(ggplot2)
+library(modelr)
+library(knitr)
+library(broom)
 ```
 
 ```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
@@ -62,6 +66,77 @@ gw_levels_current <- gw_levels %>%
   filter(between(msmt_date, 
                  as.Date('1987/01/01'), 
                  as.Date('2018/12/31')))
+```
+
+## Motivation
+
+While there are extensive studies on how wildfires affect groundwater quality, there is minimal research on how groundwater availability influences wildfire severity [@paul2022]. Specifically, this analysis has never been done in California where we are facing increasingly low groundwater levels due to over pumping and drought [@pauloo2020]. After exploring CAL FIRE's data, I found that from 1987 - 2018 the number of wildfires in Caifornia has been decreasing over time (Figure 1), however the intensity of fires has been increasing (Figure 2). Based on groundwater and plant interaction research, we know that there are ecosystems that are dependent on groundwater to survive [@meyers2021]. My question is then -- if groundwater levels are lower than usual due to over pumping and drought is this having an affect on the intensity of wildfires in California due to drier vegetation conditions?
+
+```{r}
+#plotting fire occurences 1987 - 2018
+ggplot() +
+  geom_line(data = ca_wildfire,
+            aes(x = year,
+                y = total_fires)) +
+  scale_x_continuous(breaks = scales::pretty_breaks(n = 12), name = "Year") +
+  scale_y_continuous(labels = comma, name = "Total Fires in California") +
+  theme_classic() +
+  labs(caption = 'Figure 1. Wildfire Occurences in California (1987 - 2018) are decreasing over time. Data source: CAL FIRE') +
+  theme(panel.background = element_rect(fill = "#FAFAF9"),
+        plot.background = element_rect(fill = "#FAFAF9"),
+        plot.caption = element_text(hjust = 0, face = "italic"),
+         axis.title=element_text(size=10)) 
+
+#plotting total acres burned from 1987 - 2018
+ggplot() +
+  geom_line(data = ca_wildfire,
+            aes(x = year,
+                y = total_acres_burned),
+            col = "darkred") +
+  scale_x_continuous(breaks = scales::pretty_breaks(n = 12), name = "Year") +
+  scale_y_continuous(labels = comma, name = "Total Acres Burned in California") +
+  theme_classic() +
+  labs(caption = 'Figure 2. Wildfire Severity in California (1987 - 2018) is increasing over time. Data source: CAL FIRE') +
+  theme(axis.title.y = element_text(color ="darkred"),
+         panel.background = element_rect(fill = "#FAFAF9"),
+         plot.background = element_rect(fill = "#FAFAF9"),
+         plot.caption = element_text(hjust = 0, face = "italic"),
+         axis.title=element_text(size=10))
+
+
+# grid.arrange(fire, fire_acre)
+```
+
+## Data
+
+##### CAL FIRE - Wildland Fires & Acres - All Jurisdictions (1987 - 2018)
+
+For the fire data used in my analysis, I used CAL FIRE's [Wildland Fires & Acres - All Jurisdictions (1987-2018)](https://www.fire.ca.gov/media/11397/fires-acres-all-agencies-thru-2018.pdf) data. This data tells us the total number of fires and total acres burned in California across all jurisdictions. A limitation to this data is that it is in .pdf format so I had to manually input values into an excel spreadsheet. This could lead to human error in the transfer process.
+
+##### California DWR - Periodic Groundwater Level Measurements
+
+For groundwater level data, I used the California Department of Water Resource's [periodic groundwater level measurement data](https://data.cnra.ca.gov/dataset/periodic-groundwater-level-measurements). This data did not come with a data dictionary, so it was difficult to determine what each column name was abbreviated for in the data set. Luckily, I have a background in groundwater and was able to identify that the 'gwe' column stood for groundwater elevation.
+
+## Analysis
+
+To begin my analysis of groundwater levels, I checked the distribution of groundwater elevation in California to determine if I should summarize each year's data by the median or mean. My data ended up being heavily skewed right so I decided to summarize groundwater elevation levels by the median value for each year.
+
+```{r message=FALSE, warning=FALSE}
+ggplot() +
+  geom_histogram(data = gw_levels,
+                aes(x = gwe),
+                fill = '#58A1BB',
+                col = "#FAFAF9") +
+  scale_x_continuous(limits = c(-500,6000)) +
+  scale_y_continuous(expand = c(0,0)) +
+  theme_classic() +
+  labs(x = "Groundwater Elevation (ft)",
+       y = "Number of Groundwater Wells",
+       caption = 'Figure 3. Distribution of groundwater elevation for wells in California are strongly skewed right') +
+  theme(panel.background = element_rect(fill = "#FAFAF9"),
+         plot.background = element_rect(fill = "#FAFAF9"),
+         plot.caption = element_text(hjust = 0, face = "italic"),
+         axis.title=element_text(size=10))
 
 #Create year column and find median groundwater elevation for each year
 gw_levels_year <- gw_levels_current %>% 
@@ -70,60 +145,14 @@ group_by(year) %>%
 summarize(median_gwe = median(gwe, na.rm = TRUE))
 ```
 
-## Motivation
-
-While there are extensive studies on how wildfires affect groundwater quality, there is minimal research on how groundwater availability influences wildfire severity. Specifically, this analysis has never been done in California where we are facing extremely low groundwater levels and increasingly intense wildfire seasons.
-
-```{r}
-#plotting fire occurences 1987 - 2018
-fire <- ggplot() +
-  geom_line(data = ca_wildfire,
-            aes(x = year,
-                y = total_fires)) +
-  scale_x_continuous(breaks = scales::pretty_breaks(n = 12), name = "Year") +
-  scale_y_continuous(labels = comma, name = "Total Fires in California") +
-  theme_classic() +
-  theme(panel.background = element_rect(fill = "#FAFAF9"),
-         plot.background = element_rect(fill = "#FAFAF9")) 
-
-#plotting total acres burned from 1987 - 2018
-fire_acre <- ggplot() +
-  geom_line(data = ca_wildfire,
-            aes(x = year,
-                y = total_acres_burned),
-            col = "darkred") +
-  scale_x_continuous(breaks = scales::pretty_breaks(n = 12), name = "Year") +
-  scale_y_continuous(labels = comma, name = "Total Acres Burned in California") +
-  theme_classic() +
-  theme(axis.title.y = element_text(color ="darkred"),
-         panel.background = element_rect(fill = "#FAFAF9"),
-         plot.background = element_rect(fill = "#FAFAF9"))
- 
-grid.arrange(fire, fire_acre)
-```
-
-## Data
-
-##### CAL FIRE - Wildland Fires & Acres - All Jurisdictions (1987 - 2018)
-
-For the fire data used in my analysis, I used CAL FIRES Wildland Fires & Acres - All Jurisdictions (1987-2018) data. This data tells us the total number of fires and total acres burned in California across all jurisdictions. The limitation to this data was it was in .pdf format so I had to manually input values into an excel spreadsheet.
-
-[![](images/fire_data.png)](https://www.fire.ca.gov/stats-events/)
-
-##### California DWR - Periodic Groundwater Level Measurements
-
-For groundwater level data, I used the California Department of Water Resource's periodic groundwater level measurement data.
-
-## [![](images/gw_data.png)](https://data.cnra.ca.gov/dataset/periodic-groundwater-level-measurements)
-
-####Analysis
+### Boxplot
 
 ```{r, ECHO = TRUE}
 knitr::opts_chunk$set(fig.width=12, fig.height=8) 
 
 gwe_median <- median(gw_levels_year$median_gwe)
                      
-gw_levels_year$above_median <- ifelse(gw_levels_year$median_gwe > gwe_median, "No", "Yes")
+gw_levels_year$above_median <- ifelse(gw_levels_year$median_gwe < gwe_median, "No", "Yes")
 
 boxplot_fig <- ggplot() +
   geom_boxplot(data = ca_wildfire,
@@ -135,21 +164,100 @@ boxplot_fig <- ggplot() +
   scale_y_continuous(labels = comma, 
                      name = "Total Acres Burned in California") +
   scale_x_discrete(name = "Are Groundwater Levels Above the Median?") +
+  labs(caption = 'Figure 4. Boxplot of groundwater levels above or below the median and relationship to acres burned in California') +
   theme_classic() +
-  theme(axis.text = element_text(color="black", size=15),
+  theme(axis.text = element_text(color="black", size=9),
                      axis.title.x = element_text(color= "black", 
-                                                 size=18, 
+                                                 size=10, 
                                                  vjust = -2),
                      axis.title.y = element_text(color= "black", 
-                                                 size=18, 
+                                                 size=10, 
                                                  vjust = 3),
          plot.margin = margin(20, 20, 20, 35),
          panel.background = element_rect(fill = "#FAFAF9"),
-         plot.background = element_rect(fill = "#FAFAF9"))
+         plot.background = element_rect(fill = "#FAFAF9"),
+         plot.caption = element_text(hjust = 1, face = "italic", vjust = -7))
 
 boxplot_fig
 ```
 
+### Interaction model
+
+![](images/im.png)
+
+```{r message=FALSE, warning=FALSE}
+int_data <- full_join(gw_levels_year, ca_wildfire)
+
+int_model <- lm(total_acres_burned ~ median_gwe + above_median + median_gwe:above_median, 
+            data = int_data) 
+
+dust(int_model) %>% 
+  sprinkle(col = 2:4, round = 3) %>%
+  sprinkle(col = 5, fn = quote(pvalString (value))) %>%
+  sprinkle_colnames(term = "Term",
+                  estimate = "Estimate",
+                  std.error = "SE", 
+                  statistic = "T-statistic",
+                  p.value = "P-value") %>%
+  kable(caption = "Tbl 1. Results of interaction model between area burned and groundwater elevation") %>%
+  kable_styling()
+```
+
+**With p-values all greater than 0.05 the below statements are all considered not statistically significant.**
+
+[Intercept]{.underline}: *We predict that average acres burned for years when groundwater levels are below the median at zero is 689,309 acres*
+
+[Coefficient on Groundwater Elevation]{.underline}: *When groundwater levels are below the median, area burned decreases by 1,777 acres.*
+
+[Coefficient estimate on the above median groundwater levels indicator variable (above_medianYes)]{.underline}: *On average, area burned is 560,393 acres lower for years when groundwater elevation is higher than the median when groundwater levels are zero.*
+
+[Coefficient on median_gwe:above_medianYes]{.underline}: *The impact of groundwater levels on area burned is 4,606 acres higher when groundwater levels are higher than the median compared to when groundwater levels are below the median.*
+
+```{r}
+int_data %>% 
+  ggplot(aes(x = median_gwe, 
+             y = total_acres_burned, 
+             color = above_median)) +
+  geom_point() +
+  geom_line(data = augment(int_model), 
+            aes(y = .fitted, 
+                color = above_median),
+            lwd = 1.25) +
+  scale_y_continuous(labels = comma, name = "Total Acres Burned in California") +
+  scale_x_continuous(name = "Median Groundwater Elevation (1987 - 2018)") +
+  theme_few() +
+  labs(color = "") +
+  theme(legend.position="top") +
+  labs(caption = 'Figure 5. Interaction model between acres burned, groundwater elevation and above median groundwater levels or not') +
+  scale_colour_manual(labels = c("Lower Groundwater Levels than Usual", 
+                                  "Higher Groundwater Levels than Usual"),
+                       values = c("#BB5858", "#58A1BB")) +
+    theme(axis.text = element_text(color="black", size=15),
+                     axis.title.x = element_text(color= "black", size=18, vjust = -2),
+                     axis.title.y = element_text(color= "black", size=18, vjust = 3),
+         plot.margin = margin(20, 20, 20, 35),
+         legend.text = element_text(size = 15),
+         legend.key.size = unit(1, 'cm'),
+         panel.background = element_rect(fill = "#FAFAF9"),
+         plot.background = element_rect(fill = "#FAFAF9"),
+         legend.key = element_rect(fill = "#FAFAF9"),
+         legend.background = element_rect(fill = "#FAFAF9"),
+         plot.caption = element_text(hjust = 0,
+                                     face = "italic", 
+                                     vjust = -7, 
+                                     size = 11.75))
+```
+
+### Correlation
+
+```{r}
+cor(int_data$total_acres_burned, int_data$median_gwe)
+```
+
 ## Results
 
+I began this analysis believing that lower groundwater elevation would result in an increase of acres burned in California. However, based on my box plot results (Figure 3) and my interaction model (Figure 4), I found that as groundwater elevation increases, there are more acres burned in California. With a correlation coefficient value of 0.41, there is a medium correlation between groundwater levels and total acres burned in California.
+
 ## Future Analysis
+
+The results of my analysis do not intuitively make sense to me because there should be less fuel for fire if plants have adequate hydration from groundwater. I believe further analysis is needed in order to come to a more reasonable conclusion on this topic. Due to limitations on the time frame of this project and the data used, I was only able to perform a generalized analysis across the entire state of California. To achieve more conclusive results it would be beneficial to look at specific California regions to see if there is a correlation between groundwater and wildfire severity. There is also spatial data available for California that could be used in spatial statistical analysis across the state to find if there is a relationship between groundwater and wildfire severity. Additional analysis could be conducted across other US states and compared to California's results.
