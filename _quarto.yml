@@ -3,23 +3,24 @@ project:
   output-dir: docs
 
 website:
-  favicon: images/logo.png
+  favicon: images/new_logo.png
   title: "Meagan Brown"
   sidebar: true
   search: false
   navbar:
     title: Meagan Brown
+    logo: images/new_logo.png
     left:
       - text: Home
         href: index.qmd
       - text: About
         href: about.qmd
+      - href: posts.qmd
+        text: Blog
         
     right:
       - text: CV
         href: brown_meagan_cv.pdf
-      - href: posts.qmd
-        text: Blog
 
   page-footer: 
     background: "#4E7895"
@@ -32,9 +33,9 @@ website:
 
 format:
   html:
-    page-layout: full
     theme: 
-    - mystyle.css
+    - mystyles.scss
+    page-layout: full
     mainfont: Avenir
     backgroundcolor: "#FAFAF9"
     css: styles.css

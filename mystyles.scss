@@ -1,14 +1,19 @@
+/*-- scss:defaults --*/
 /* -- define Sass vars --*/
 
 // Colors
 $gray-blue: #4a76a8; 
 $pink-dark: #a84a68;
 $teal: #509183;
+$pink-mid: #9C7C85;
+$green: #8F9C7C;
+$egg: #FAFAF9;
 
 //font size
 $my-font-size: 20px;
 
 // Base Document Colors
-$navbar-bg: $gray-blue;
-
-$body-bg: $pink-dark;
+$navbar-bg: $pink-mid; // navbard background color
+$footer-bg: $pink-mid; // footer background color
+$body-bg: $egg; // tab background color:
+$link-color: $pink-mid;

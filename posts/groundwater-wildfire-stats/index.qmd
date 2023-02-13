@@ -48,18 +48,18 @@ ca_wildfire <- read_csv(here("posts",
 
 #read in CA groundwater measurement data
 gw_levels <- read_csv(here("posts",
-                            "groundwater-wildfire-stats",
-                            "data",
-                            "gw_levels_current.csv"))
+                           "groundwater-wildfire-stats",
+                           "data",
+                           "gw_levels_current.csv"))
 ```
 
 ```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
 #changing measurement dates column from POSIXTct to Date 
 gw_levels <- gw_levels %>% 
-mutate(msmt_date = format(as.POSIXct(msmt_date,
-format='%Y/%m/%d %H:%M:%S'),
-format='%Y/%m/%d')) %>% #dropping time from date data
-mutate(msmt_date = ymd(msmt_date))
+  mutate(msmt_date = format(as.POSIXct(msmt_date,
+                                       format='%Y/%m/%d %H:%M:%S'),
+                            format='%Y/%m/%d')) %>% #dropping time from date data
+  mutate(msmt_date = ymd(msmt_date))
 
 #filter dates to match wildfire data (1987 - 2018)
 gw_levels_current <- gw_levels %>% 
@@ -85,7 +85,7 @@ ggplot() +
   theme(panel.background = element_rect(fill = "#FAFAF9"),
         plot.background = element_rect(fill = "#FAFAF9"),
         plot.caption = element_text(hjust = 0, face = "italic"),
-         axis.title=element_text(size=10)) 
+        axis.title=element_text(size=10)) 
 
 #plotting total acres burned from 1987 - 2018
 ggplot() +
@@ -98,10 +98,10 @@ ggplot() +
   theme_classic() +
   labs(caption = 'Figure 2. Wildfire Severity in California (1987 - 2018) is increasing over time. Data source: CAL FIRE') +
   theme(axis.title.y = element_text(color ="darkred"),
-         panel.background = element_rect(fill = "#FAFAF9"),
-         plot.background = element_rect(fill = "#FAFAF9"),
-         plot.caption = element_text(hjust = 0, face = "italic"),
-         axis.title=element_text(size=10))
+        panel.background = element_rect(fill = "#FAFAF9"),
+        plot.background = element_rect(fill = "#FAFAF9"),
+        plot.caption = element_text(hjust = 0, face = "italic"),
+        axis.title=element_text(size=10))
 
 
 # grid.arrange(fire, fire_acre)
@@ -124,9 +124,9 @@ To begin my analysis of groundwater levels, I checked the distribution of ground
 ```{r message=FALSE, warning=FALSE}
 ggplot() +
   geom_histogram(data = gw_levels,
-                aes(x = gwe),
-                fill = '#58A1BB',
-                col = "#FAFAF9") +
+                 aes(x = gwe),
+                 fill = '#58A1BB',
+                 col = "#FAFAF9") +
   scale_x_continuous(limits = c(-500,6000)) +
   scale_y_continuous(expand = c(0,0)) +
   theme_classic() +
@@ -134,15 +134,15 @@ ggplot() +
        y = "Number of Groundwater Wells",
        caption = 'Figure 3. Distribution of groundwater elevation for wells in California are strongly skewed right') +
   theme(panel.background = element_rect(fill = "#FAFAF9"),
-         plot.background = element_rect(fill = "#FAFAF9"),
-         plot.caption = element_text(hjust = 0, face = "italic"),
-         axis.title=element_text(size=10))
+        plot.background = element_rect(fill = "#FAFAF9"),
+        plot.caption = element_text(hjust = 0, face = "italic"),
+        axis.title=element_text(size=10))
 
 #Create year column and find median groundwater elevation for each year
 gw_levels_year <- gw_levels_current %>% 
-mutate(year = lubridate::year(msmt_date)) %>% 
-group_by(year) %>% 
-summarize(median_gwe = median(gwe, na.rm = TRUE))
+  mutate(year = lubridate::year(msmt_date)) %>% 
+  group_by(year) %>% 
+  summarize(median_gwe = median(gwe, na.rm = TRUE))
 ```
 
 ### Boxplot
@@ -151,32 +151,32 @@ summarize(median_gwe = median(gwe, na.rm = TRUE))
 knitr::opts_chunk$set(fig.width=12, fig.height=8) 
 
 gwe_median <- median(gw_levels_year$median_gwe)
-                     
+
 gw_levels_year$above_median <- ifelse(gw_levels_year$median_gwe < gwe_median, "No", "Yes")
 
 boxplot_fig <- ggplot() +
   geom_boxplot(data = ca_wildfire,
-            aes(x = gw_levels_year$above_median,
-                y = total_acres_burned),
-            col = c("#BB5858", "#58A1BB"),
-            lwd = 1.25,
-            fill = "#FAFAF9") +
+               aes(x = gw_levels_year$above_median,
+                   y = total_acres_burned),
+               col = c("#BB5858", "#58A1BB"),
+               lwd = 1.25,
+               fill = "#FAFAF9") +
   scale_y_continuous(labels = comma, 
                      name = "Total Acres Burned in California") +
   scale_x_discrete(name = "Are Groundwater Levels Above the Median?") +
   labs(caption = 'Figure 4. Boxplot of groundwater levels above or below the median and relationship to acres burned in California') +
   theme_classic() +
   theme(axis.text = element_text(color="black", size=9),
-                     axis.title.x = element_text(color= "black", 
-                                                 size=10, 
-                                                 vjust = -2),
-                     axis.title.y = element_text(color= "black", 
-                                                 size=10, 
-                                                 vjust = 3),
-         plot.margin = margin(20, 20, 20, 35),
-         panel.background = element_rect(fill = "#FAFAF9"),
-         plot.background = element_rect(fill = "#FAFAF9"),
-         plot.caption = element_text(hjust = 1, face = "italic", vjust = -7))
+        axis.title.x = element_text(color= "black", 
+                                    size=10, 
+                                    vjust = -2),
+        axis.title.y = element_text(color= "black", 
+                                    size=10, 
+                                    vjust = 3),
+        plot.margin = margin(20, 20, 20, 35),
+        panel.background = element_rect(fill = "#FAFAF9"),
+        plot.background = element_rect(fill = "#FAFAF9"),
+        plot.caption = element_text(hjust = 1, face = "italic", vjust = -7))
 
 boxplot_fig
 ```
@@ -189,16 +189,16 @@ boxplot_fig
 int_data <- full_join(gw_levels_year, ca_wildfire)
 
 int_model <- lm(total_acres_burned ~ median_gwe + above_median + median_gwe:above_median, 
-            data = int_data) 
+                data = int_data) 
 
 dust(int_model) %>% 
   sprinkle(col = 2:4, round = 3) %>%
   sprinkle(col = 5, fn = quote(pvalString (value))) %>%
   sprinkle_colnames(term = "Term",
-                  estimate = "Estimate",
-                  std.error = "SE", 
-                  statistic = "T-statistic",
-                  p.value = "P-value") %>%
+                    estimate = "Estimate",
+                    std.error = "SE", 
+                    statistic = "T-statistic",
+                    p.value = "P-value") %>%
   kable(caption = "Tbl 1. Results of interaction model between area burned and groundwater elevation") %>%
   kable_styling()
 ```
@@ -230,22 +230,22 @@ int_data %>%
   theme(legend.position="top") +
   labs(caption = 'Figure 5. Interaction model between acres burned, groundwater elevation and above median groundwater levels or not') +
   scale_colour_manual(labels = c("Lower Groundwater Levels than Usual", 
-                                  "Higher Groundwater Levels than Usual"),
-                       values = c("#BB5858", "#58A1BB")) +
-    theme(axis.text = element_text(color="black", size=15),
-                     axis.title.x = element_text(color= "black", size=18, vjust = -2),
-                     axis.title.y = element_text(color= "black", size=18, vjust = 3),
-         plot.margin = margin(20, 20, 20, 35),
-         legend.text = element_text(size = 15),
-         legend.key.size = unit(1, 'cm'),
-         panel.background = element_rect(fill = "#FAFAF9"),
-         plot.background = element_rect(fill = "#FAFAF9"),
-         legend.key = element_rect(fill = "#FAFAF9"),
-         legend.background = element_rect(fill = "#FAFAF9"),
-         plot.caption = element_text(hjust = 0,
-                                     face = "italic", 
-                                     vjust = -7, 
-                                     size = 11.75))
+                                 "Higher Groundwater Levels than Usual"),
+                      values = c("#BB5858", "#58A1BB")) +
+  theme(axis.text = element_text(color="black", size=15),
+        axis.title.x = element_text(color= "black", size=18, vjust = -2),
+        axis.title.y = element_text(color= "black", size=18, vjust = 3),
+        plot.margin = margin(20, 20, 20, 35),
+        legend.text = element_text(size = 15),
+        legend.key.size = unit(1, 'cm'),
+        panel.background = element_rect(fill = "#FAFAF9"),
+        plot.background = element_rect(fill = "#FAFAF9"),
+        legend.key = element_rect(fill = "#FAFAF9"),
+        legend.background = element_rect(fill = "#FAFAF9"),
+        plot.caption = element_text(hjust = 0,
+                                    face = "italic", 
+                                    vjust = -7, 
+                                    size = 11.75))
 ```
 
 ### Correlation
