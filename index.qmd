@@ -46,7 +46,9 @@ I gained skills in research, coding, and ArcGIS Pro during my undergraduate educ
 
 ![](images/fire.jpeg){width="1000"}
 
-<h7><b><u>City of Santa Barbara - Sustainability & Resilience Dashboard \| (2021)</b></u></h7>
+<h7><b><u>[City of Santa Barbara - Sustainability & Resilience Dashboard | (2021)](https://www.arcgis.com/apps/dashboards/97777fbe8eb04bdb998813c6759dff69)</b></u></h7><br>
+Role: Dashboard Developer
+
 
 [![Dashboard created for the City of Santa Barbara Sustainability and Resilience Department to show city clean up efforts over time. Created with ESRI ArcGIS Products](dashboard.png)](https://www.arcgis.com/apps/dashboards/97777fbe8eb04bdb998813c6759dff69)
 :::
