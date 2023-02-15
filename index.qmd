@@ -51,4 +51,5 @@ Role: Dashboard Developer
 
 
 [![Dashboard created for the City of Santa Barbara Sustainability and Resilience Department to show city clean up efforts over time. Created with ESRI ArcGIS Products](images/dashboard.png)](https://www.arcgis.com/apps/dashboards/97777fbe8eb04bdb998813c6759dff69)
+
 :::
