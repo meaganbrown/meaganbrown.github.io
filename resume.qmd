@@ -1,6 +1,0 @@
----
-title: "resume"
-editor: visual
----
-
-**My resume**
