@@ -42,14 +42,13 @@ I gained skills in research, coding, and ArcGIS Pro during my undergraduate educ
 
 ## Highlighted Projects
 
-<h10><b><u>Master's Environmental Data Science Capstone Project \| 2023 </b></u></h10><br> Title: [Assessing Wildfire in Groundwater Dependent Ecosystems](https://bren.ucsb.edu/projects/assessing-how-groundwater-availability-coincides-wildfire-risk)<br> Role: Project Manager<br>
+<h10><b><u>Master's Environmental Data Science Capstone Project | 2023 </b></u></h10><br> Title: [Assessing Wildfire in Groundwater Dependent Ecosystems](https://bren.ucsb.edu/projects/assessing-how-groundwater-availability-coincides-wildfire-risk)<br> Role: Project Manager<br>
 
-![](images/fire.jpeg){width="1000"}
+![](images/fire.jpeg){width="700"}
 
-<h7><b><u>[City of Santa Barbara - Sustainability & Resilience Dashboard | (2021)](https://www.arcgis.com/apps/dashboards/97777fbe8eb04bdb998813c6759dff69)</b></u></h7><br>
-Role: Dashboard Developer
+<h7><b><u>City of Santa Barbara - Sustainability & Resilience Dashboard | (2021)</b></u></h7><br> 
+Role: Dashboard Developer <br> 
+Description: [Dashboard created for the City of Santa Barbara Sustainability & Resilience Department to show city clean up efforts over time. Created with ESRI ArcGIS Products (ArcGIS Online).](https://www.arcgis.com/apps/dashboards/97777fbe8eb04bdb998813c6759dff69)
 
-
-[![Dashboard created for the City of Santa Barbara Sustainability and Resilience Department to show city clean up efforts over time. Created with ESRI ArcGIS Products](images/dashboard.png)](https://www.arcgis.com/apps/dashboards/97777fbe8eb04bdb998813c6759dff69)
-
+[![](images/dashboard.png)](https://www.arcgis.com/apps/dashboards/97777fbe8eb04bdb998813c6759dff69)
 :::

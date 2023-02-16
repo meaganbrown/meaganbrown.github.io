@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "resume.html",
-    "href": "resume.html",
-    "title": "resume",
-    "section": "",
-    "text": "My resume"
-  },
-  {
     "objectID": "posts/groundwater-wildfire-stats/index.html",
     "href": "posts/groundwater-wildfire-stats/index.html",
     "title": "Does Groundwater Availability Influence Wildfire Severity?",
@@ -46,7 +39,7 @@
     "href": "index.html",
     "title": "Meagan Brown",
     "section": "",
-    "text": "Professional BioEducationHighlighted Projects\n\n\n\nProfessional Bio\n\nI am a masters student looking to use my passion for environmental justice and data science skills to make a difference in California after graduating in June 2023. I love visualizing and solving problems using R and geographic information system software. I am especially interested in California’s water resources.\nI gained skills in research, coding, and ArcGIS Pro during my undergraduate education. After graduating from UCSB in 2021, I worked with The Nature Conservancy looking at California’s Sustainable Groundwater Management Act. Additionally, I independently developed an interactive dashboard and survey using ArcGIS Online tools for the City of Santa Barbara’s Sustainability & Resilience department.\n\n\n\nEducation\n\nBren School of Environmental Science & Management, UCSB  Master of Environmental Data Science (MEDS) | 2023\nUniversity of California, Santa Barbara (UCSB)  Bachelor of Science in Environmental Studies | 2021  Emphasis: Geographic Information Systems\n\n\nMaster’s Environmental Data Science Capstone Project | 2023  Title: Assessing Wildfire in Groundwater Dependent Ecosystems Role: Project Manager\n\nCity of Santa Barbara - Sustainability & Resilience Dashboard | (2021)\n\n\n\nDashboard created for the City of Santa Barbara Sustainability and Resilience Department to show city clean up efforts over time. Created with ESRI ArcGIS Products"
+    "text": "Professional BioEducationHighlighted Projects\n\n\n\nProfessional Bio\n\nI am a masters student looking to use my passion for environmental justice and data science skills to make a difference in California after graduating in June 2023. I love visualizing and solving problems using R and geographic information system software. I am especially interested in California’s water resources.\nI gained skills in research, coding, and ArcGIS Pro during my undergraduate education. After graduating from UCSB in 2021, I worked with The Nature Conservancy looking at California’s Sustainable Groundwater Management Act. Additionally, I independently developed an interactive dashboard and survey using ArcGIS Online tools for the City of Santa Barbara’s Sustainability & Resilience department.\n\n\n\nEducation\n\nBren School of Environmental Science & Management, UCSB  Master of Environmental Data Science (MEDS) | 2023\nUniversity of California, Santa Barbara (UCSB)  Bachelor of Science in Environmental Studies | 2021  Emphasis: Geographic Information Systems\n\n\nMaster’s Environmental Data Science Capstone Project | 2023  Title: Assessing Wildfire in Groundwater Dependent Ecosystems Role: Project Manager\n\nCity of Santa Barbara - Sustainability & Resilience Dashboard | (2021) Role: Dashboard Developer  Description: Dashboard created for the City of Santa Barbara Sustainability & Resilience Department to show city clean up efforts over time. Created with ESRI ArcGIS Products (ArcGIS Online)."
   },
   {
     "objectID": "about.html",
