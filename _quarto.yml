@@ -21,6 +21,12 @@ website:
     right:
       - text: CV
         href: brown_meagan_cv.pdf
+      - icon: linkedin
+        href: https://www.linkedin.com/in/meaganbrown/
+      - icon: github
+        href: https://github.com/meaganbrown
+      - icon: envelope
+        href: mailto:meagan_brown@bren.ucsb.edu
 
   page-footer: 
     background: "#4E7895"
