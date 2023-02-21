@@ -28,7 +28,7 @@ about:
 
 <h4>Professional Bio</h4>
 
-I am a masters student graduating in June 2023 with a degree in Environmental Data Science. I am looking to use my passion for environmental justice and data science skills to make a difference in California. I love visualizing and solving problems using R and geographic information system software. I am especially interested in California's water resources, but open to other opportunities. 
+I am a masters student graduating in June 2023 with a degree in [Environmental Data Science](https://bren.ucsb.edu/masters-programs/master-environmental-data-science). I am looking to use my passion for environmental justice and data science skills to make a difference in California. I love visualizing and solving problems using R and geographic information system software. I am especially interested in California's water resources, but open to other opportunities.
 
 I gained skills in research, coding, and ArcGIS Pro during my undergraduate education. After graduating from UC Santa Barbara in 2021, I worked with The Nature Conservancy looking at California's Sustainable Groundwater Management Act. Additionally, I independently developed an interactive dashboard and survey using ArcGIS Online tools for the City of Santa Barbara's Sustainability & Resilience department.
 
@@ -42,13 +42,11 @@ I gained skills in research, coding, and ArcGIS Pro during my undergraduate educ
 
 ## Highlighted Projects
 
-<h10><b><u>Master's Environmental Data Science Capstone Project | 2023 </b></u></h10><br> Title: [Assessing Wildfire in Groundwater Dependent Ecosystems](https://bren.ucsb.edu/projects/assessing-how-groundwater-availability-coincides-wildfire-risk)<br> Role: Project Manager<br>
+<h10><b><u>Master's Environmental Data Science Capstone Project \| 2023 </b></u></h10><br> Title: [Assessing Wildfire in Groundwater Dependent Ecosystems](https://bren.ucsb.edu/projects/assessing-how-groundwater-availability-coincides-wildfire-risk)<br> Role: Project Manager<br>
 
 ![](images/fire.jpeg){width="700"}
 
-<h7><b><u>City of Santa Barbara - Sustainability & Resilience Dashboard | (2021)</b></u></h7><br> 
-Role: Dashboard Developer <br> 
-Description: [Dashboard created for the City of Santa Barbara Sustainability & Resilience Department to show city clean up efforts over time. Created with ESRI ArcGIS Products (ArcGIS Online).](https://www.arcgis.com/apps/dashboards/97777fbe8eb04bdb998813c6759dff69)
+<h7><b><u>City of Santa Barbara - Sustainability & Resilience Dashboard \| (2021)</b></u></h7><br> Role: Dashboard Developer <br> Description: [Dashboard created for the City of Santa Barbara Sustainability & Resilience Department to show city clean up efforts over time. Created with ESRI ArcGIS Products (ArcGIS Online).](https://www.arcgis.com/apps/dashboards/97777fbe8eb04bdb998813c6759dff69)
 
 [![](images/dashboard.png)](https://www.arcgis.com/apps/dashboards/97777fbe8eb04bdb998813c6759dff69)
 :::
