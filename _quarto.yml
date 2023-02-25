@@ -19,7 +19,7 @@ website:
         text: Blog
         
     right:
-      - text: Resume
+      - text: Resume_
         href: Brown_Meagan_Resume.pdf
       - text: CV
         href: brown_meagan_cv.pdf
