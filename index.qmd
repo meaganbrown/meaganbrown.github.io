@@ -46,7 +46,13 @@ I gained skills in research, coding, and ArcGIS Pro during my undergraduate educ
 
 ![](images/fire.jpeg){width="700"}
 
-<h7><b><u>City of Santa Barbara - Sustainability & Resilience Dashboard \| (2021)</b></u></h7><br> Role: Dashboard Developer <br> Description: [Dashboard created for the City of Santa Barbara Sustainability & Resilience Department to show city clean up efforts over time. Created with ESRI ArcGIS Products (ArcGIS Online).](https://www.arcgis.com/apps/dashboards/97777fbe8eb04bdb998813c6759dff69)
+Description: We are developing a [ShinyApp Dashboard](https://shiny.rstudio.com) in R to show wildfire statistics and trends within [groundwater dependent ecosystems (GDEs)](https://www.fs.usda.gov/managing-land/natural-resources/geology/groundwater/groundwater-dependent-ecosystems) in California. The final product will be similar to [this example](https://gde.codefornature.org/#/map) where you can click on any GDE in California and view wildfire statistics for that particular GDE. 
+
+<h7><b><u>City of Santa Barbara - Sustainability & Resilience \| (2021)</b></u></h7><br>
+Title: [CleanSB Summary Dashboard](https://www.arcgis.com/apps/dashboards/97777fbe8eb04bdb998813c6759dff69)<br>
+Role: Dashboard Developer<br>
 
 [![](images/dashboard.png)](https://www.arcgis.com/apps/dashboards/97777fbe8eb04bdb998813c6759dff69)
+
+Description: Dashboard created for the City of Santa Barbara Sustainability & Resilience Department to show city clean up efforts over time. Created with ESRI ArcGIS Products (ArcGIS Online).
 :::
