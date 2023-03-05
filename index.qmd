@@ -1,24 +1,19 @@
 ---
 title: "Meagan Brown"
-subtitle: "Groundwater | Environmental Justice | Data Science"
+subtitle: "Groundwater | Environmental Justice"
 about: 
+   id: hero-heading
    template: trestles
    image: images/me.png
    image-shape: rounded
    image-width: 10cm
    links: 
-        - icon: linkedin
-          text: LinkedIn
-          href: https://www.linkedin.com/in/meaganbrown/
-        - icon: github
-          text: GitHub
-          href: https://github.com/meaganbrown
-        - icon: twitter
-          text: twitter
-          href: https://twitter.com/meagan__brown
-        - icon: envelope
-          text: Email Me!
-          href: mailto:meagan_brown@ucsb.edu
+      - icon: droplet
+        text: Resume
+        href: Brown_Meagan_Resume.pdf
+      - icon: droplet-half
+        text: CV
+        href: brown_meagan_cv.pdf
 ---
 
 ![](images/groundwater)
@@ -41,7 +36,7 @@ I gained skills in research, coding, and ArcGIS Pro during my undergraduate educ
 <h7><b><u>University of California, Santa Barbara (UCSB)</b></u></h7><br> ![](images/cap.png){width="4%"} Bachelor of Science in Environmental Studies \| 2021 <br> Emphasis: Geographic Information Systems
 
 ## Highlighted Projects
-
+<h4>Highlighted Projects</h4>
 <h10><b><u>Master's Environmental Data Science Capstone Project \| 2023 </b></u></h10><br> Title: [Assessing Wildfire in Groundwater Dependent Ecosystems](https://bren.ucsb.edu/projects/assessing-how-groundwater-availability-coincides-wildfire-risk)<br> Role: Project Manager<br>
 
 ![](images/fire.jpeg){width="700"}
@@ -56,3 +51,4 @@ Role: Dashboard Developer<br>
 
 Description: Dashboard created for the City of Santa Barbara Sustainability & Resilience Department to show city clean up efforts over time. Created with ESRI ArcGIS Products (ArcGIS Online).
 :::
+

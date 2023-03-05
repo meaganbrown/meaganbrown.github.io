@@ -3,41 +3,41 @@ project:
   output-dir: docs
 
 website:
-  favicon: images/new_logo.png
-  title: "Meagan Brown"
+  favicon: images/MEAGAN.png
+  title: ""
   sidebar: true
   search: false
   navbar:
-    title: Meagan Brown
-    logo: images/new_logo.png
+    logo: images/meagan_nav.png
     left:
-      - text: Home
-        href: index.qmd
       - text: About
         href: about.qmd
       - href: posts.qmd
         text: Blog
+
+    right: 
+    - text: "Let's Get in Touch!"
+      menu:
+        - icon: linkedin
+          text: LinkedIn
+          href: https://www.linkedin.com/in/meaganbrown/
+        - icon: github
+          text: GitHub
+          href: https://github.com/meaganbrown
+        - icon: twitter
+          text: twitter
+          href: https://twitter.com/meagan__brown
+        - icon: envelope
+          text: Email
+          href: mailto:meagan_brown@ucsb.edu
         
-    right:
-      - text: Resume
-        href: Brown_Meagan_Resume.pdf
-      - text: CV
-        href: brown_meagan_cv.pdf
-      - icon: linkedin
-        href: https://www.linkedin.com/in/meaganbrown/
-      - icon: github
-        href: https://github.com/meaganbrown
-      - icon: envelope
-        href: mailto:meagan_brown@bren.ucsb.edu
 
   page-footer: 
     background: "#4E7895"
-    left: "Copyright February 2023, Meagan Brown"
+    left: "© March 2023, Meagan Brown"
     right: 
       - icon: github
-        href:  https://github.com/meaganbrown
-      - icon: twitter
-        href: https://twitter.com/meagan__brown
+        href: https://github.com/meaganbrown/meaganbrown.github.io
 
 format:
   html:

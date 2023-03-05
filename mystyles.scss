@@ -8,12 +8,32 @@ $teal: #509183;
 $pink-mid: #9C7C85;
 $green: #8F9C7C;
 $egg: #FAFAF9;
+$grey: #68777E;
+$yellow: #706151;
 
 //font size
-$my-font-size: 20px;
+$my-font-size: 10px;
 
 // Base Document Colors
 $navbar-bg: $pink-mid; // navbard background color
 $footer-bg: $pink-mid; // footer background color
 $body-bg: $egg; // tab background color:
 $link-color: $pink-mid;
+
+.navbar-brand img { // see https://github.com/robertmitchellv/robertmitchellv.github.io/blob/main/custom-dark.scss
+  max-height: 45px;
+  width: auto;
+}
+
+.center {
+  text-align: center;
+  left: 50%;
+}
+
+.about-link-text { // button text size (landing page)
+  font-size: 18px;
+}
+
+.bi { // button icon size (landing page)
+  font-size: 18px;
+}
