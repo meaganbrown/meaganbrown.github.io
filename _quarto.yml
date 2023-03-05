@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  favicon: images/MEAGAN.png
+  favicon: images/meagan_favicon.png
   title: ""
   sidebar: true
   search: false
