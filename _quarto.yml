@@ -10,12 +10,14 @@ website:
   navbar:
     logo: images/meagan_nav.png
     left:
-      - text: About
+      - text: Home Page
+        href: index.qmd
+      - text: About Meagan
         href: about.qmd
-      - href: posts.qmd
-        text: Blog
 
     right: 
+    - text: Blog
+      href: posts.qmd
     - text: "Let's Get in Touch!"
       menu:
         - icon: linkedin
