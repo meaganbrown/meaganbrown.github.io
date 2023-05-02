@@ -7,18 +7,29 @@ $pink-dark: #a84a68;
 $teal: #509183;
 $pink-mid: #9C7C85;
 $green: #8F9C7C;
+$green2: #6b705c;
 $egg: #FAFAF9;
 $grey: #68777E;
 $yellow: #706151;
+$darkblue: #355070;
+$green3: #b7b7a4;
+$brown:#9c6644;
+$blue4:#555b6e;
+$blue: #7C898B;
+$yellow: #F2CC8F;
+$lightbrown: #B7A198;
+$darkbrown: #6C584C;
 
 //font size
 $my-font-size: 10px;
 
 // Base Document Colors
-$navbar-bg: $pink-mid; // navbard background color
-$footer-bg: $pink-mid; // footer background color
-$body-bg: $egg; // tab background color:
-$link-color: $pink-mid;
+$navbar-bg: $blue; // navbard background color
+$footer-bg: $blue; // footer background color
+$body-bg: $yellow; // tab background color:
+$link-color: $blue;
+$navbar-hl: $yellow; 
+$navbar-fg: $egg; // navbar main text color
 
 .navbar-brand img { // see https://github.com/robertmitchellv/robertmitchellv.github.io/blob/main/custom-dark.scss
   max-height: 45px;
