@@ -40,7 +40,7 @@ website:
 
   page-footer: 
     background: "#4E7895"
-    left: "© March 2023, Meagan Brown"
+    left: "© May 2023, Meagan Brown"
     right: 
       - icon: github
         href: https://github.com/meaganbrown/meaganbrown.github.io
