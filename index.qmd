@@ -1,6 +1,6 @@
 ---
 title: "Meagan Brown"
-subtitle: "Groundwater | Environmental Justice"
+subtitle: "Water Justice | Data Science"
 about: 
    id: hero-heading
    template: trestles
