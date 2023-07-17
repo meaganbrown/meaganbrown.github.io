@@ -35,6 +35,7 @@ I gained skills in research, coding, and ArcGIS Pro during my undergraduate educ
 
 <h7><b><u>University of California, Santa Barbara (UCSB)</b></u></h7><br> ![](images/cap.png){width="4%"} Bachelor of Science in Environmental Studies \| 2021 <br> Emphasis: Geographic Information Systems
 
+
 ## Highlighted Projects
 <h4>Highlighted Projects</h4>
 <h10><b><u>Master's Environmental Data Science Capstone Project \| 2023 </b></u></h10><br> Title: [Assessing Wildfire in Groundwater Dependent Ecosystems](https://bren.ucsb.edu/projects/assessing-how-groundwater-availability-coincides-wildfire-risk)<br> Role: Project & Data Manager <br>
