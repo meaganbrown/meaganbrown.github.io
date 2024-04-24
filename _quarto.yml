@@ -14,6 +14,8 @@ website:
         href: index.qmd
       - text: About Meagan
         href: about.qmd
+      - text: timeline test
+        href: test.qmd
 
     right: 
     - text: Blog
@@ -40,7 +42,7 @@ website:
 
   page-footer: 
     background: "#4E7895"
-    left: "© July 2023, Meagan Brown"
+    left: "© April 2024, Meagan Brown"
     right: 
       - icon: github
         href: https://github.com/meaganbrown/meaganbrown.github.io

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Timeline</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="timeline-container">
+        <div class="timeline-block timeline-block-right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content" onclick="showDetails('1999', 'JavaScript Introduced by Brendan Eich at Netscape')">
+                <h3>1999</h3>
+                <p>JavaScript Introduced by Brendan Eich at Netscape</p>
+            </div>
+        </div>
+        <div class="timeline-block timeline-block-left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content" onclick="showDetails('2009', 'ECMAScript5: strict mode, Object method')">
+                <h3>2009</h3>
+                <p>ECMAScript5: strict mode, Object method</p>
+            </div>
+        </div>
+        <!-- Additional timeline blocks as needed -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,204 @@
+
+.timeline-block-left {
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+.timeline-dot {
+    width: 25px;
+    height: 25px;
+    background-color: #F2CC8F; 
+    border-radius: 50%;
+    position: absolute;
+}
+
+.timeline-block-right .timeline-dot {
+    right: -12px;
+}
+
+.timeline-block-left .timeline-dot {
+    left: -12px;
+}
+
+.timeline-content {
+    width: 40%;
+    padding: 10px 20px;
+    background-color: #7C898B; /* blue */
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.timeline-content h3 {
+    color: #7C898B; /* egg color */
+}
+
+.timeline-content h4 {
+    color: #F2CC8F; /
+}
+
+.timeline-content p {
+    color: #7C898B; /* maintaining readability */
+}
+
+/* Timeline styling */
+.timeline-container {
+    position: relative;
+    width: 80%;
+    max-width: 960px;
+    margin: auto;
+}
+.timeline-block {
+    display: flex;
+    justify-content: flex-end; /* Align right */
+    margin-bottom: 10px;
+}
+.timeline-block-left {
+    justify-content: flex-start; /* Align left */
+}
+.timeline-content {
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Modal Image Gallery */
+.modal {
+    display: none; /* Hidden by default */
+    position: absolute; /* Changed from fixed to absolute */
+    z-index: 9999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: auto; /* Adjusted for content size */
+    height: auto; /* Adjusted for content size */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0); /* Transparent background */
+}
+
+/* Modal Content */
+.modal img {
+    display: block;
+    margin: auto;
+    max-width: 60%; /* Adjust the width as desired */
+    max-height: 60vh; /* Adjust the height as desired */
+    border-radius: 10px; /* Rounded edges */
+    object-fit: contain; /* Maintain aspect ratio */
+    background-color: transparent; /* Remove white background */
+    border: none; /* Remove any border */
+    box-shadow: none; /* Remove any box-shadow */
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.close:hover {
+    color: #aaa;
+    text-decoration: none;
+}
+
+
+.timeline-block {
+    opacity: 0.1;
+    transition: opacity 0.2s ease; /* Smooth transition for opacity */
+}
+
+.timeline-block.reveal {
+    opacity: 1; /* Make the block visible */
+}
+
+
+.timeline-container {
+    position: relative;
+    width: 80%;
+    max-width: 960px;
+    margin: auto;
+    overflow: visible; /* Allows overflow elements to be visible */
+}
+
+.timeline-container::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px; /* Line thickness */
+    background: linear-gradient(to bottom, #f2cc8f 0%, #f2cc8f 50%, #f2cc8f 100%);
+    z-index: 1;
+    transform: translateX(-50%);
+    height: 100%; /* This makes the line extend the full height of the container */
+}
+
+
+
+.content-image {
+    width: 100%; /* Make the image responsive to the content box width */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between the image and text */
+    pointer-events: none;
+}
+
+.timeline-content {
+    padding: 10px 20px;
+    background-color: #fff; /* Adjust color as needed */
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0; /* Position on the left side; change to 'right: 0;' for the right side */
+    width: 5px; /* Set the width of the progress bar */
+    height: 0%; /* Initial height */
+    background-color: #4CAF50; /* A vivid color to stand out */
+    z-index: 1000; /* Ensure it stays on top of other content */
+    transition: height 0.3s ease; /* Smooth transition for height changes */
+}
+
+
