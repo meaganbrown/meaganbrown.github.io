@@ -14,8 +14,6 @@ website:
         href: index.qmd
       - text: About Meagan
         href: about.qmd
-      - text: timeline test
-        href: test.qmd
 
     right: 
     - text: Blog
