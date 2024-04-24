@@ -25,13 +25,21 @@ title: "About Meagan"
         </div>
         <div class="timeline-block timeline-block-left">
             <div class="timeline-content">
-                <img src="images/ppic.png" class="content-image">
-                <h3>June 2023 - Sept 2023</h3>
-                <h4>Water Policy Intern | Public Policy Institute of California</h4>
-                <p>Participated in a policy environment, assisting with understanding groundwater recharge efforts in the San Joaquin Valley after experiencing a wet winter in Caifornia.</p>
+                <img src="images/debwork.jpg" class="content-image">
+                <h3>June 2021 - Sept 2023</h3>
+                <h4>US & CA Water Research Assistant | UCSB, Dr. Perrone & Dr. Jasechko</h4>
+                <p>Assisted professors at UCSB with water research interests.</p>
             </div>
         </div>
         <div class="timeline-block timeline-block-right">
+            <div class="timeline-content">
+                <img src="images/ppic.png" class="content-image">
+                <h3>June 2023 - Sept 2023</h3>
+                <h4>Water Policy Intern | Public Policy Institute of California</h4>
+                <p>Participated in a policy environment, assisting with understanding groundwater recharge efforts in the San Joaquin Valley after experiencing a wet winter in California.</p>
+            </div>
+        </div>
+        <div class="timeline-block timeline-block-left">
             <div class="timeline-content">
                 <img src="images/meds_dashboard.png" class="content-image">
                 <h3>Aug 2022 - June 2023</h3>
@@ -39,8 +47,23 @@ title: "About Meagan"
                 <p>Completed an 11 month graduate program.</p>
             </div>
         </div>
+        <div class="timeline-block timeline-block-right">
+            <div class="timeline-content">
+                <img src="images/tnc.jpg" class="content-image">
+                <h3>June 2021 - Aug 2022</h3>
+                <h4>Groundwater Policy & Equity Analyst | The Nature Conservancy</h4>
+                <p>Using ArcGIS Pro, independently analyzed well proximity to vulnerable users of groundwater</p>
+            </div>
+        </div>
+        <div class="timeline-block timeline-block-left">
+            <div class="timeline-content">
+                <img src="images/dashboard.png" class="content-image">
+                <h3>Nov 2021 - Aug 2022</h3>
+                <h4>Mapping Intern | City of Santa Barbara</h4>
+                <p>Independently developed a public facing interactive dashboard for the city’s Clean SB program.</p>
+            </div>
+        </div>
     </div>
-
     <!-- Image Pop-up Modal -->
     <div id="imageModal" class="modal">
         <span class="close">&times;</span>
@@ -51,6 +74,7 @@ title: "About Meagan"
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
